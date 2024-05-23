@@ -22,6 +22,10 @@ public class UserController {
     private final ActivityService activityService;
     private final BodyDataService bodyDataService;
 
+    @GetMapping("/health")
+    public String health() {
+        return "ok";
+    }
 
     @GetMapping("/api/users/my-change-fat")
     public ResponseEntity<?> myChangeFat() {
